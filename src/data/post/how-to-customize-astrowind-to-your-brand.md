@@ -1,7 +1,7 @@
 ---
 publishDate: 2023-08-06T00:00:00Z
-title: How to customize AstroWind template to suit your branding
-excerpt: Personalize AstroWind template for your brand. Our guide unlocks seamless customization steps for a unique online presence.
+title: Cómo personalizar la plantilla AstroWind para adaptarla a tu marca
+excerpt: Personaliza la plantilla AstroWind para tu marca. Nuestra guía desvela los pasos para una personalización fluida y una presencia online única.
 image: https://images.unsplash.com/photo-1546984575-757f4f7c13cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80
 tags:
   - astro

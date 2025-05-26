@@ -1,9 +1,9 @@
 ---
 publishDate: 2023-07-17T00:00:00Z
-title: AstroWind template in depth
-excerpt: While easy to get started, Astrowind is quite complex internally.  This page provides documentation on some of the more intricate parts.
+title: Plantilla AstroWind en profundidad
+excerpt: Aunque es fácil comenzar, AstroWind es bastante complejo internamente. Esta página proporciona documentación sobre algunas de las partes más intrincadas.
 image: https://images.unsplash.com/photo-1534307671554-9a6d81f4d629?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1651&q=80
-category: Documentation
+category: Documentación
 tags:
   - astro
   - tailwind css
@@ -15,35 +15,35 @@ metadata:
 import DListItem from '~/components/ui/DListItem.astro';
 import ToggleTheme from '~/components/common/ToggleTheme.astro';
 
-## Overview
+## Resumen General
 
-It can be a somewhat daunting task trying to get a handle on _AstroWind_ internals, and particularly various points of usage.
+Puede ser una tarea algo intimidante tratar de comprender los aspectos internos de _AstroWind_, y particularmente varios puntos de uso.
 
-This page outlines and clarifies some of the techniques found in _AstroWind_. Use it as a guide for further modification, or an instructional for techniques to use in your own endeavors.
+Esta página describe y aclara algunas de las técnicas que se encuentran en _AstroWind_. Úsala como guía para modificaciones futuras, o como instructivo para técnicas a utilizar en tus propios proyectos.
 
-## Styling
+## Estilos
 
-As the name suggests, _AstroWind_ relies on _TailWind_ for styling. Furthermore, _AstroWind_ defines custom low level style settings which are incorporated into _TailWind_ seamlessly, and which provides consistency for higher level styling constructs, as well as enabling dark mode.
+Como su nombre indica, _AstroWind_ se basa en _TailWind_ para los estilos. Además, _AstroWind_ define configuraciones de estilo personalizadas de bajo nivel que se incorporan a _TailWind_ sin problemas, y que proporcionan consistencia para construcciones de estilo de nivel superior, además de habilitar el modo oscuro.
 
-The styling mechanism consists of the following files (all paths are prefixed with `/src/` ):
+El mecanismo de estilos consiste en los siguientes archivos (todas las rutas tienen el prefijo `/src/` ):
 
 <DListItem dt="assets/styles/tailwind.css">
-  This file is essentially an extension of _TailWind's_ base.css. High-level component styles are defined here. Note
-  also styling on elements selected by 'attribute' selectors at the bottom of the files, particularly those selected by
-  'data' attributes.
+  Este archivo es esencialmente una extensión de base.css de _TailWind_. Aquí se definen los estilos de componentes de alto nivel. Observa
+  también los estilos en elementos seleccionados por selectores de 'atributo' al final de los archivos, particularmente aquellos seleccionados por
+  atributos 'data'.
 </DListItem>
 <DListItem dt="components/CustomStyles.astro">
-  Defines custom colors and fonts. For these to take effect in the 'base.css' file, they need to be loaded in the html
-  header section. See next.
+  Define colores y fuentes personalizadas. Para que estos surtan efecto en el archivo 'base.css', necesitan ser cargados en la sección
+  del encabezado html. Ver a continuación.
 </DListItem>
 <DListItem dt="layouts/Layout.astro">
-  This layout is used for all of the pages rendered by _AstroWind_. The contents of _tailwind.css_ and
-  _CustomStyles.astro_ component, described above, is injected into the html header.
+  Este layout se utiliza para todas las páginas renderizadas por _AstroWind_. El contenido de _tailwind.css_ y
+  el componente _CustomStyles.astro_, descritos anteriormente, se inyecta en el encabezado html.
 </DListItem>
 
-### Dark Mode
+### Modo Oscuro
 
-_Dark Mode_ is triggered by the little 'sunlight' icon:<ToggleTheme/>in the page header. It is defined in the _components/common/ToggleTheme.astro_, but the event is attached and the action defined in _components/common/BasicScripts.astro_ in the following snippet:
+El _Modo Oscuro_ se activa mediante el pequeño ícono de 'sol':<ToggleTheme/>en el encabezado de la página. Se define en _components/common/ToggleTheme.astro_, pero el evento se adjunta y la acción se define en _components/common/BasicScripts.astro_ en el siguiente fragmento:
 
 ```javascript
 attachEvent('[data-aw-toggle-color-scheme]', 'click', function () {
@@ -55,15 +55,15 @@ attachEvent('[data-aw-toggle-color-scheme]', 'click', function () {
 });
 ```
 
-Note that this is a client event. _BasicScripts.astro_ defines several other client-side functionality as well as this one.
+Nota que este es un evento del cliente. _BasicScripts.astro_ define varias otras funcionalidades del lado del cliente así como esta.
 
-## Advanced Slot Usage
+## Uso Avanzado de Slots
 
-_slots_ are part of the component implementation, which is a common concept among many frameworks, including _Astrojs_. The typical slot definition in a component looks like this:
+_los slots_ son parte de la implementación del componente, que es un concepto común entre muchos frameworks, incluyendo _Astrojs_. La definición típica de un slot en un componente se ve así:
 
 ```astro
 ---
-// (file: MyComponent.astro)
+// (archivo: MyComponent.astro)
 const { title } = Astro.props;
 export interface Props {
   title: string;
@@ -73,27 +73,27 @@ export interface Props {
 <div>
   <h2>{title}</h2>
   <slot />
-  <!-- slot contents injected here -->
+  <!-- el contenido del slot se inyecta aquí -->
   <div></div>
 </div>
 ```
 
-And in usage elsewhere:
+Y en su uso en otro lugar:
 
 ```astro
 import MyComponent from "~/components/MyComponent"; ...
-<MyComponent someArg="A Slot example">
-  <p>This content will be displayed in the slot</p>
+<MyComponent someArg="Un ejemplo de Slot">
+  <p>Este contenido se mostrará en el slot</p>
 </MyComponent>
 ```
 
-### Alternate usage
+### Uso Alternativo
 
-There's another way we can use slots, useful particularly when a component can have markdown content is as follows (study carefully...):
+Hay otra forma en que podemos usar los slots, útil particularmente cuando un componente puede tener contenido markdown, es la siguiente (estudia cuidadosamente...):
 
 ```astro
 ---
-// (file: MyComponent.astro)
+// (archivo: MyComponent.astro)
 
 const { title } = Astro.props;
 export interface Props {
@@ -102,47 +102,47 @@ export interface Props {
 const content: string = await Astro.props.render('default');
 ---
 
-// renders the html to the 'content' variable
+// renderiza el html en la variable 'content'
 <div>
   <h2>{title}</h2>
   <div set:html={content} />
-  <!-- slot contents injected here -->
+  <!-- el contenido del slot se inyecta aquí -->
   <div></div>
 </div>
 ```
 
-Whoa!! What's going on here?
+¡Vaya! ¿Qué está pasando aquí?
 
-Notice there is no slot definition in the html portion of the component. Instead, what we do is have _Astro_ render the slot content (here, the 'default' content, but you can also render named slots) into a variable, and then use that content in a _div_ (for instance).
+Nota que no hay una definición de slot en la porción html del componente. En cambio, lo que hacemos es hacer que _Astro_ renderice el contenido del slot (aquí, el contenido 'por defecto', pero también puedes renderizar slots nombrados) en una variable, y luego usar ese contenido en un _div_ (por ejemplo).
 
-So, if the usage is in a markdown file, like so:
+Entonces, si el uso está en un archivo markdown, así:
 
 ```mdx
 import MyComponent from '../../components/MyComponent';
 
-# Using the above component in a .mdx file (that can take components)
+# Usando el componente anterior en un archivo .mdx (que puede aceptar componentes)
 
 {' '}
 
-<MyComponent title="This is a slot implementor">### Here is some markdown content - With a bullet item.</MyComponent>
+<MyComponent title="Este es un implementador de slot">### Aquí hay contenido markdown - Con un ítem de viñeta.</MyComponent>
 ```
 
-_MyComponent_ renders the markdown to html and then injects it into the div.
+_MyComponent_ renderiza el markdown a html y luego lo inyecta en el div.
 
-This actually has a big advantage -- consider that with the normal usage you don't have access to the slot contents: _Astro_ just plops the content into the _&lt;slot/&gt;_ tag. Using this method, however, allows you to access the content and further manipulate it before it gets inserted into the html.
+Esto en realidad tiene una gran ventaja: considera que con el uso normal no tienes acceso al contenido del slot: _Astro_ simplemente coloca el contenido en la etiqueta _&lt;slot/&gt;_. Sin embargo, usando este método, te permite acceder al contenido y manipularlo antes de que se inserte en el html.
 
-This allows a great deal of flexibility in component design.
+Esto permite una gran cantidad de flexibilidad en el diseño del componente.
 
-### Yet Another Step
+### Un Paso Más
 
-Now, we get to the techniques used in _AstroWind_, we'll use the _pages/index.astro_ file to illustrate.
+Ahora, llegamos a las técnicas utilizadas en _AstroWind_, usaremos el archivo _pages/index.astro_ para ilustrarlo.
 
-You'll note that the index file imports a lot of components, each one roughly analagous to a panel in the index page. Each of these components, in turn, is instantiated sequentially throughout the page. But, you'll notice that some of them use this kind of construct (we'll use the last section, _CallToAction_, as it is most illustrative of the technique):
+Notarás que el archivo index importa muchos componentes, cada uno aproximadamente análogo a un panel en la página de índice. Cada uno de estos componentes, a su vez, se instancia secuencialmente a lo largo de la página. Pero, notarás que algunos de ellos usan este tipo de constructo (usaremos la última sección, _CallToAction_, ya que es la más ilustrativa de la técnica):
 
 ```astro
 <CallToAction
   callToAction={{
-    text: 'Get template',
+    text: 'Obtener plantilla',
     href: 'https://github.com/onwidget/astrowind',
     icon: 'tabler:download',
   }}
@@ -152,44 +152,44 @@ You'll note that the index file imports a lot of components, each one roughly an
   </Fragment>
 
   <Fragment slot="subtitle">
-    Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't waste
-    more time! :P
+    Sorpréndete mucho con estos enormes números falsos que estás viendo en esta página. <br class="hidden md:inline" />¡No pierdas más
+    tiempo! :P
   </Fragment>
 </CallToAction>
 ```
 
-Some things to note, here:
+Algunas cosas a notar, aquí:
 
-<DListItem dt="The <em>callToAction</em> argument">
-  This argument is actually being passed a javascript object -- not a string. (However, in the TS definition, it could
-  be a string...)
+<DListItem dt="El argumento <em>callToAction</em>">
+  Este argumento es en realidad un objeto javascript el que se está pasando -- no una cadena. (Sin embargo, en la definición de TS, podría
+  ser una cadena...)
 </DListItem>
-<DListItem dt="There are several <em>Fragment</em> children">
-  Furthermore, these &lt;Fragment/&gt; elements each have a _slot="(value)"_ specifier.
+<DListItem dt="Hay varios hijos <em>Fragment</em>">
+  Además, estos elementos &lt;Fragment/&gt; cada uno tiene un especificador _slot="(valor)"_.
 </DListItem>
 
-The latter seems odd, because &lt;Fragment/&gt; is a built-in component over which you have no control, and doesn't have a provision for rendering slots, <em>per se</em>.
+Lo último parece extraño, porque &lt;Fragment/&gt; es un componente incorporado sobre el que no tienes control, y no tiene una disposición para renderizar slots, <em>per se</em>.
 
-The answer lies in a paragraph in the _Astro_ docs, slots section, which states:
+La respuesta se encuentra en un párrafo en los docs de _Astro_, sección de slots, que dice:
 
-> Use a `slot="my-slot"` attribute on the child element that you want to pass through to a matching slot `name="my-slot" />` placeholder in your component.
+> Usa un atributo `slot="mi-slot"` en el elemento hijo que deseas pasar a través de un slot coincidente `name="mi-slot" />` en tu componente.
 
-That's pretty concise and a bit of a head-scratcher to read, but basically what it says is that:
+Eso es bastante conciso y un poco desconcertante de leer, pero básicamente lo que dice es que:
 
-1. Given a component that defines a slot:
-1. you can reference a slot from a child element of that component and,
-1. provide content to the parent component's slot from the child by naming the slot in the child with a `slot="<slot-name>"` property assignment, where the _slot-name_ is the parent's slot.
+1. Dada una componente que define un slot:
+1. puedes referenciar un slot desde un elemento hijo de ese componente y,
+1. proporcionar contenido al slot del componente padre desde el hijo nombrando el slot en el hijo con una asignación de propiedad `slot="<slot-name>"`, donde _slot-name_ es el slot del padre.
 
-So, in the example above, the _CallToAction_ component defines the _subtitle_ slot, and the following _&lt;Fragment slot="subtitle"&gt;_ populates the slot with the following content:
+Entonces, en el ejemplo anterior, el componente _CallToAction_ define el slot _subtitle_, y el siguiente _&lt;Fragment slot="subtitle"&gt;_ popula el slot con el siguiente contenido:
 
 ```astro
 <Fragment slot="subtitle">
-  Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't waste
-  more time! :P
+  Sorpréndete mucho con estos enormes números falsos que estás viendo en esta página. <br class="hidden md:inline" />¡No pierdas más
+  tiempo! :P
 </Fragment>
 ```
 
-And, the _CallToAction_ component defines and renders it thusly:
+Y, el componente _CallToAction_ lo define y renderiza así:
 
 ```astro
 ---
@@ -202,6 +202,6 @@ const { subtitle = await Astro.slots.render('subtitle') } = Astro.props;
 //...
 ```
 
-There's a lot to wrap your head around, here.
+Hay mucho que asimilar aquí.
 
-Notice first that _subtitle_ is defined as a prop/argument, but it's being processed as a slot. Interestingly, prop args and slots seem to be somewhat interchangeable: if the subtitle was just a string, it would simply take that assignment. The main difference is that if you render them independently, you have to call the render with an _await_ modifier.
+Nota primero que _subtitle_ se define como un prop/argumento, pero se está procesando como un slot. Curiosamente, los argumentos y los slots parecen ser algo intercambiables: si el subtitle fuera simplemente una cadena, simplemente tomaría esa asignación. La principal diferencia es que si los renderizas independientemente, tienes que llamar al render con un modificador _await_.

@@ -21,7 +21,7 @@ const googlePlayImg = '~/assets/images/google-play.png';
 const googlePlayDownloadLink = 'https://github.com/onwidget/astrowind';
 
 const metadata = {
-  title: 'Mobile App Homepage',
+  title: 'Página de Inicio de Aplicación Móvil',
 };
 ---
 
@@ -31,13 +31,13 @@ const metadata = {
     <Header
       position="left"
       links={[
-        { text: 'Services', href: '#' },
-        { text: 'Features', href: '#' },
-        { text: 'About', href: '#' },
+        { text: 'Servicios', href: '#' },
+        { text: 'Características', href: '#' },
+        { text: 'Acerca de', href: '#' },
       ]}
       actions={[
         {
-          text: 'Download',
+          text: 'Descargar',
           href: '#download',
         },
       ]}
@@ -46,156 +46,156 @@ const metadata = {
     />
   </Fragment>
 
-  <!-- Hero2 Widget ******************* -->
+  <!-- Widget Hero2 ******************* -->
 
   <Hero2
-    tagline="Mobile App Web Demo"
+    tagline="Demostración Web de Aplicación Móvil"
     image={{
       src: 'https://images.unsplash.com/photo-1535303311164-664fc9ec6532?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'AstroWind Hero Image',
+      alt: 'Imagen Hero de AstroWind',
     }}
   >
     <Fragment slot="title">
-      <span class="text-accent dark:text-white">AstroWind App</span>: <br /> professional websites <span
-        class="hidden xl:inline">made easy</span
+      <span class="text-accent dark:text-white">Aplicación AstroWind</span>: <br /> sitios web profesionales <span
+        class="hidden xl:inline">hechos fácilmente</span
       >
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        Unlock boundless creativity at your fingertips: your gateway to innovative design.
+        Desbloquea una creatividad ilimitada al alcance de tu mano: tu puerta de entrada al diseño innovador.
       </span>
-      Download now and embark on a journey to elevate your projects like never before.
+      Descarga ahora y emprende un viaje para elevar tus proyectos como nunca antes.
     </Fragment>
 
     <div slot="actions" class="flex max-w-sm gap-4">
       <Button variant="link" href={appStoreDownloadLink}>
-        <Image src={appStoreImg} alt="App Store Image" width={200} />
+        <Image src={appStoreImg} alt="Imagen de App Store" width={200} />
       </Button>
 
       <Button variant="link" href={googlePlayDownloadLink}>
-        <Image src={googlePlayImg} alt="Google Play Image" width={200} />
+        <Image src={googlePlayImg} alt="Imagen de Google Play" width={200} />
       </Button>
     </div>
   </Hero2>
 
-  <!-- Features3 Widget ************** -->
+  <!-- Widget Features3 ************** -->
 
   <Features3
     id="features"
-    title="How to use our app?"
-    subtitle="Tired of spending hours crafting documents from scratch? Our app offers an innovative solution. With a wide array of professionally designed templates, you can now create stunning documents in minutes. Explore our templates now and experience the difference."
-    tagline="Step-by-step guide"
+    title="¿Cómo usar nuestra aplicación?"
+    subtitle="¿Cansado de pasar horas creando documentos desde cero? Nuestra aplicación ofrece una solución innovadora. Con una amplia gama de plantillas diseñadas profesionalmente, ahora puedes crear documentos impresionantes en minutos. Explora nuestras plantillas ahora y experimenta la diferencia."
+    tagline="Guía paso a paso"
     columns={2}
     items={[
       {
-        title: 'Download and install the app',
-        description: `Begin your journey by downloading our user-friendly app from your device's app store or our official website.`,
+        title: 'Descarga e instala la aplicación',
+        description: `Comienza tu viaje descargando nuestra aplicación fácil de usar desde la tienda de aplicaciones de tu dispositivo o nuestro sitio web oficial.`,
         icon: 'tabler:square-number-1',
       },
       {
-        title: 'Sign up',
+        title: 'Regístrate',
         description:
-          'Create your account by providing the necessary information, enabling you to access our full range of features.',
+          'Crea tu cuenta proporcionando la información necesaria, lo que te permitirá acceder a nuestra gama completa de características.',
         icon: 'tabler:square-number-2',
       },
       {
-        title: 'Browse templates',
-        description: 'Explore our diverse collection of website templates, categorized for easy navigation.',
+        title: 'Explora plantillas',
+        description: 'Explora nuestra diversa colección de plantillas de sitios web, categorizadas para una fácil navegación.',
         icon: 'tabler:square-number-3',
       },
       {
-        title: 'Preview and select a template',
-        description: `Visualize the potential of each template through previews, then choose the one that aligns best with your project's needs.`,
+        title: 'Previsualiza y selecciona una plantilla',
+        description: `Visualiza el potencial de cada plantilla a través de vistas previas, luego elige la que mejor se alinee con las necesidades de tu proyecto.`,
         icon: 'tabler:square-number-4',
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1521517407911-565264e7d82d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80',
-      alt: 'Colorful Image',
+      alt: 'Imagen Colorida',
     }}
   />
 
-  <!-- Content Widget **************** -->
+  <!-- Widget Content **************** -->
 
   <Content
     isReversed
     items={[
       {
-        title: 'User-friendly interface',
+        title: 'Interfaz fácil de usar',
         description:
-          'An intuitive and easy-to-navigate interface that allows users to quickly browse and find the templates they need.',
+          'Una interfaz intuitiva y fácil de navegar que permite a los usuarios explorar y encontrar rápidamente las plantillas que necesitan.',
         icon: 'tabler:wand',
       },
       {
-        title: 'Personalization options',
+        title: 'Opciones de personalización',
         description:
-          'Include basic customization tools that let users modify text, colors, images, and other elements within the templates.',
+          'Incluye herramientas básicas de personalización que permiten a los usuarios modificar texto, colores, imágenes y otros elementos dentro de las plantillas.',
         icon: 'tabler:settings',
       },
       {
-        title: 'Ready-to-use components',
+        title: 'Componentes listos para usar',
         description:
-          'Enhance your designs with ready-to-use elements like graphics, icons, and layouts, saving you time and boosting visual appeal.',
+          'Mejora tus diseños con elementos listos para usar como gráficos, iconos y diseños, ahorrándote tiempo y aumentando el atractivo visual.',
         icon: 'tabler:template',
       },
       {
-        title: 'Preview Mode',
-        description: 'Provide a preview of each template, allowing users to see how it looks before making a purchase.',
+        title: 'Modo de vista previa',
+        description: 'Proporciona una vista previa de cada plantilla, permitiendo a los usuarios ver cómo se ve antes de realizar una compra.',
         icon: 'tabler:carousel-horizontal',
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1576153192621-7a3be10b356e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
-      alt: 'Colorful Image',
+      alt: 'Imagen Colorida',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Main Features</h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Características Principales</h3>
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
+  <!-- Widget Content **************** -->
 
   <Content
     isAfterContent
     items={[
       {
-        title: 'Offline Access',
-        description: 'Offer the option for users to download purchased templates for offline use.',
+        title: 'Acceso sin conexión',
+        description: 'Ofrece la opción para que los usuarios descarguen las plantillas compradas para usarlas sin conexión.',
         icon: 'tabler:wifi-off',
       },
       {
-        title: 'Secure Cloud Storage',
+        title: 'Almacenamiento seguro en la nube',
         description:
-          'Provide cloud storage for purchased templates, ensuring users can access and back up their templates from anywhere securely.',
+          'Proporciona almacenamiento en la nube para las plantillas compradas, asegurando que los usuarios puedan acceder y respaldar sus plantillas desde cualquier lugar de forma segura.',
         icon: 'tabler:file-download',
       },
       {
-        title: 'Regular Updates',
-        description: 'Continuously add new templates and features to keep the app fresh and engaging for users.',
+        title: 'Actualizaciones regulares',
+        description: 'Añade continuamente nuevas plantillas y características para mantener la aplicación fresca y atractiva para los usuarios.',
         icon: 'tabler:refresh',
       },
       {
-        title: 'Wishlist',
-        description: `Allow users to create a wishlist of templates they're interested in, making it easier for them to revisit and potentially purchase later.`,
+        title: 'Lista de deseos',
+        description: `Permite a los usuarios crear una lista de deseos de las plantillas que les interesan, facilitándoles volver a visitarlas y potencialmente comprarlas más tarde.`,
         icon: 'tabler:heart',
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1453738773917-9c3eff1db985?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Vintage Image',
+      alt: 'Imagen Vintage',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Other features</h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Otras características</h3>
     </Fragment>
   </Content>
 
-  <!-- Stats Widget ****************** -->
+  <!-- Widget Stats ****************** -->
 
   <Stats
-    title="Statistics of our app"
+    title="Estadísticas de nuestra aplicación"
     stats={[
       { amount: '20K', icon: 'tabler:download' },
       { amount: '18.5K', icon: 'tabler:users' },
@@ -203,94 +203,94 @@ const metadata = {
     ]}
   />
 
-  <!-- Testimonials Widget *********** -->
+  <!-- Widget Testimonials *********** -->
 
   <Testimonials
-    title="What our users say?"
+    title="¿Qué dicen nuestros usuarios?"
     testimonials={[
       {
-        testimonial: `It's made exploring and downloading website templates a breeze. The interface is intuitive, and I had no trouble finding the perfect template for my project. It's an app that truly empowers users.`,
+        testimonial: `Ha hecho que explorar y descargar plantillas de sitios web sea muy fácil. La interfaz es intuitiva y no tuve problemas para encontrar la plantilla perfecta para mi proyecto. Es una aplicación que realmente empodera a los usuarios.`,
         name: 'Cary Kennedy',
-        job: 'Film director',
+        job: 'Director de cine',
         image: {
           src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-          alt: 'Cary Kennedy Image',
+          alt: 'Imagen de Cary Kennedy',
         },
       },
       {
-        testimonial: `The app's seamless download process and intuitive layout have made selecting templates an enjoyable experience. Being able to preview and experiment with different designs before committing has saved me time and ensured I get the perfect look for my website.`,
+        testimonial: `El proceso de descarga fluido de la aplicación y su diseño intuitivo han hecho que seleccionar plantillas sea una experiencia agradable. Poder previsualizar y experimentar con diferentes diseños antes de comprometerme me ha ahorrado tiempo y me ha asegurado obtener el aspecto perfecto para mi sitio web.`,
         name: 'Josh Wilkinson',
-        job: 'Product Manager',
+        job: 'Gerente de Producto',
         image: {
           src: 'https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-          alt: 'Josh Wilkinson Image',
+          alt: 'Imagen de Josh Wilkinson',
         },
       },
       {
         testimonial:
-          'I was able to download and use a professional website template within minutes. The step-by-step process and user-friendly interface made it easy for me to create a website that looks as if it was designed by a pro.',
+          'Pude descargar y usar una plantilla de sitio web profesional en cuestión de minutos. El proceso paso a paso y la interfaz fácil de usar me facilitaron la creación de un sitio web que parece diseñado por un profesional.',
         name: 'Sidney Hansen',
-        job: 'Decorator',
+        job: 'Decorador(a)',
         image: {
           src: 'https://images.unsplash.com/photo-1512361436605-a484bdb34b5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-          alt: 'Sidney Hansen Image',
+          alt: 'Imagen de Sidney Hansen',
         },
       },
     ]}
     callToAction={{
       target: '_blank',
-      text: 'Read more testimonials',
+      text: 'Leer más testimonios',
       href: 'https://github.com/onwidget/astrowind',
       icon: 'tabler:chevron-right',
     }}
   />
 
-  <!-- FAQs Widget ******************* -->
+  <!-- Widget FAQs ******************* -->
 
   <FAQs
-    title="Still have some doubts?"
+    title="¿Aún tienes algunas dudas?"
     items={[
       {
-        title: 'What does this app do?',
+        title: '¿Qué hace esta aplicación?',
         description:
-          'This app provides a platform for you to easily browse, purchase, download, and use a wide range of website templates for your projects.',
+          'Esta aplicación proporciona una plataforma para que puedas navegar, comprar, descargar y usar fácilmente una amplia gama de plantillas de sitios web para tus proyectos.',
       },
       {
-        title: 'How can this app solve my problem?',
+        title: '¿Cómo puede esta aplicación resolver mi problema?',
         description:
-          'This app streamlines the process of finding and implementing professional website designs, saving you time and effort in creating visually appealing and functional websites.',
+          'Esta aplicación simplifica el proceso de encontrar e implementar diseños de sitios web profesionales, ahorrándote tiempo y esfuerzo en la creación de sitios web visualmente atractivos y funcionales.',
       },
       {
-        title: 'Is it available for my device?',
-        description: `Our app is designed for compatibility across various devices and platforms, ensuring accessibility whether you're using a smartphone, tablet, or computer.`,
+        title: '¿Está disponible para mi dispositivo?',
+        description: `Nuestra aplicación está diseñada para ser compatible con varios dispositivos y plataformas, asegurando la accesibilidad ya sea que estés usando un teléfono inteligente, tableta o computadora.`,
       },
       {
-        title: 'What makes this app different from others?',
+        title: '¿Qué hace que esta aplicación sea diferente de otras?',
         description:
-          'Our app stands out for its user-friendly interface, extensive template collection, and seamless integration of the purchasing and downloading process, making it highly efficient.',
+          'Nuestra aplicación se destaca por su interfaz fácil de usar, su extensa colección de plantillas y la integración fluida del proceso de compra y descarga, lo que la hace altamente eficiente.',
       },
       {
-        title: 'Are there any costs involved?',
+        title: '¿Hay algún costo involucrado?',
         description:
-          'While the app itself may be free to download, there may be costs associated with purchasing specific templates based on your preferences and project requirements.',
+          'Si bien la aplicación en sí puede ser de descarga gratuita, puede haber costos asociados con la compra de plantillas específicas según tus preferencias y requisitos del proyecto.',
       },
     ]}
   />
 
-  <!-- CallToAction Widget *********** -->
+  <!-- Widget CallToAction *********** -->
 
   <CallToAction
     id="download"
-    title="Download our app now!"
-    subtitle="Access a variety of stunning templates, simplify your creative process, and elevate your online presence."
+    title="¡Descarga nuestra aplicación ahora!"
+    subtitle="Accede a una variedad de plantillas impresionantes, simplifica tu proceso creativo y eleva tu presencia en línea."
   >
     <div slot="actions" class="flex max-w-sm gap-4">
       <Button variant="link" href={appStoreDownloadLink}>
-        <Image src={appStoreImg} alt="App Store Image" width={200} />
+        <Image src={appStoreImg} alt="Imagen de App Store" width={200} />
       </Button>
 
       <Button variant="link" href={googlePlayDownloadLink}>
-        <Image src={googlePlayImg} alt="Google Play Image" width={200} />
+        <Image src={googlePlayImg} alt="Imagen de Google Play" width={200} />
       </Button>
     </div>
   </CallToAction>

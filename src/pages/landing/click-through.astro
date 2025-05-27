@@ -5,34 +5,34 @@ import Hero2 from '~/components/widgets/Hero2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Click-through Landing Page Demo',
+  title: 'Demostración de Página de Aterrizaje Click-through',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero2 Widget ******************* -->
+  <!-- Componente Hero2 ******************* -->
 
   <Hero2
-    tagline="Click-through Demo"
-    title="Click-through Landing Page: The Perfect Bridge to Conversion!"
-    subtitle="Learn how to design a Click-Through Landing Page that seamlessly guides visitors to your main offer."
+    tagline="Demostración Click-through"
+    title="Página de Aterrizaje Click-through: ¡El Puente Perfecto hacia la Conversión!"
+    subtitle="Aprende cómo diseñar una Página de Aterrizaje Click-Through que guíe sin problemas a los visitantes a tu oferta principal."
     actions={[
-      { variant: 'primary', text: 'Call to Action', href: '#', icon: 'tabler:square-rounded-arrow-right' },
-      { text: 'Learn more', href: '#' },
+      { variant: 'primary', text: 'Llamada a la Acción', href: '#', icon: 'tabler:square-rounded-arrow-right' },
+      { text: 'Saber más', href: '#' },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Click-through Landing Page Hero Image',
+      alt: 'Imagen Hero de Página de Aterrizaje Click-through',
     }}
   />
 
   <CallToAction
-    title="Coming soon"
-    subtitle="We are working on the content of these demo pages. You will see them very soon. Stay tuned Stay tuned!"
+    title="Próximamente"
+    subtitle="Estamos trabajando en el contenido de estas páginas de demostración. Las verás muy pronto. ¡Mantente atento!"
     actions={[
       {
         variant: 'primary',
-        text: 'Download Template',
+        text: 'Descargar Plantilla',
         href: 'https://github.com/onwidget/astrowind',
         icon: 'tabler:download',
       },

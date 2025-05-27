@@ -8,7 +8,7 @@ const load = async function () {
     images = import.meta.glob('~/assets/images/**/*.{jpeg,jpg,png,tiff,webp,gif,svg,JPEG,JPG,PNG,TIFF,WEBP,GIF,SVG}');
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
-    // continue regardless of error
+    // continuar independientemente del error
   }
   return images;
 };
@@ -25,17 +25,17 @@ export const fetchLocalImages = async () => {
 export const findImage = async (
   imagePath?: string | ImageMetadata | null
 ): Promise<string | ImageMetadata | undefined | null> => {
-  // Not string
+  // No es una cadena de texto
   if (typeof imagePath !== 'string') {
     return imagePath;
   }
 
-  // Absolute paths
+  // Rutas absolutas
   if (imagePath.startsWith('http://') || imagePath.startsWith('https://') || imagePath.startsWith('/')) {
     return imagePath;
   }
 
-  // Relative paths or not "~/assets/"
+  // Rutas relativas o no "~/assets/"
   if (!imagePath.startsWith('~/assets/images')) {
     return imagePath;
   }

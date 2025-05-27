@@ -1,4 +1,4 @@
-This folder will become an integration for **AstroWind**.
+Esta carpeta se convertirá en una integración para **AstroWind**.
 
-We are working to allow updates to template instances.
-These are changes on the way to new **AstroWind v2**
+Estamos trabajando para permitir actualizaciones a las instancias de las plantillas.
+Estos son cambios en el camino hacia el nuevo **AstroWind v2**

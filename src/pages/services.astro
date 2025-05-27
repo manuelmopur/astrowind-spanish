@@ -7,218 +7,218 @@ import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'Services',
+  title: 'Servicios',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+  <!-- Widget Hero ******************* -->
 
   <Hero
-    tagline="Services"
-    title="Elevate your projects with our stunning templates"
-    subtitle="Explore our meticulously crafted templates tailored to various industries and purposes. From captivating presentations to functional website designs, we offer the tools you need to succeed."
-    actions={[{ variant: 'primary', target: '_blank', text: 'Start exploring', href: '/' }]}
+    tagline="Servicios"
+    title="Eleva tus proyectos con nuestras impresionantes plantillas"
+    subtitle="Explora nuestras plantillas meticulosamente elaboradas y adaptadas a diversas industrias y propósitos. Desde presentaciones cautivadoras hasta diseños web funcionales, ofrecemos las herramientas que necesitas para tener éxito."
+    actions={[{ variant: 'primary', target: '_blank', text: 'Comienza a explorar', href: '/' }]}
     image={{
       src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'AstroWind Hero Image',
+      alt: 'Imagen Hero de AstroWind',
     }}
   />
 
-  <!-- Features2 Widget ************** -->
+  <!-- Widget Features2 ************** -->
 
   <Features2
-    title="Explore our diverse templates"
-    subtitle="Discover our selection below to streamline and elevate your projects."
+    title="Explora nuestras diversas plantillas"
+    subtitle="Descubre nuestra selección a continuación para optimizar y elevar tus proyectos."
     columns={3}
     items={[
       {
-        title: 'Educational',
+        title: 'Educativas',
         description:
-          'By harmonizing instructional design and visual appeal, templates streamline content creation for varied materials, expediting development and cultivating engaging educational spaces.',
+          'Al armonizar el diseño instruccional y el atractivo visual, las plantillas agilizan la creación de contenido para materiales variados, acelerando el desarrollo y cultivando espacios educativos atractivos.',
         icon: 'tabler:school',
       },
       {
-        title: 'Interior Design',
+        title: 'Diseño de Interiores',
         description:
-          'Crafting functional, visually appealing spaces for residential and commercial use. Templates emphasize layout, colors, and furniture setups, offering a versatile toolkit for your design vision.',
+          'Creando espacios funcionales y visualmente atractivos para uso residencial y comercial. Las plantillas enfatizan la distribución, los colores y la configuración de muebles, ofreciendo un conjunto de herramientas versátil para tu visión de diseño.',
         icon: 'tabler:home-star',
       },
       {
-        title: 'Photography',
-        description: `Empowering photographers, our templates facilitate captivating storytelling. With a keen focus on layout, galleries, and typography, they cater to both professionals and enthusiasts.`,
+        title: 'Fotografía',
+        description: `Empoderando a los fotógrafos, nuestras plantillas facilitan la narración cautivadora. Con un gran enfoque en la distribución, galerías y tipografía, satisfacen tanto a profesionales como a entusiastas.`,
         icon: 'tabler:photo',
       },
       {
-        title: 'E-commerce',
+        title: 'Comercio Electrónico',
         description:
-          'Developing engaging online stores, our E-commerce templates ensure a dynamic presence to effectively showcase products. Ideal for startups or revamps.',
+          'Desarrollando tiendas online atractivas, nuestras plantillas de Comercio Electrónico aseguran una presencia dinámica para mostrar productos de manera efectiva. Ideal para startups o renovaciones.',
         icon: 'tabler:shopping-cart',
       },
       {
         title: 'Blog',
         description:
-          'With attention to typography, these templates empower effective content presentation for writers at any stage, ensuring visually engaging and user-friendly blogs.',
+          'Con atención a la tipografía, estas plantillas empoderan la presentación efectiva de contenido para escritores en cualquier etapa, asegurando blogs visualmente atractivos y fáciles de usar.',
         icon: 'tabler:article',
       },
       {
-        title: 'Business',
+        title: 'Negocios',
         description:
-          'Providing polished options for effective visual communication, these templates empower both startups and established companies for a professional brand presence.',
+          'Proporcionando opciones pulidas para una comunicación visual efectiva, estas plantillas empoderan tanto a startups como a empresas establecidas para una presencia de marca profesional.',
         icon: 'tabler:building-store',
       },
       {
         title: 'Branding',
         description:
-          'Offering pre-designed elements for a consistent brand identity, including logos and marketing materials. Ideal for new ventures or revamps.',
+          'Ofreciendo elementos prediseñados para una identidad de marca consistente, incluyendo logotipos y materiales de marketing. Ideal para nuevas empresas o renovaciones.',
         icon: 'tabler:arrow-big-up-lines',
       },
       {
-        title: 'Medical',
-        description: `From presentations to patient forms, these tools enhance communication effectiveness for healthcare professionals. Ideal for medical practices and research pursuits.`,
+        title: 'Médicas',
+        description: `Desde presentaciones hasta formularios para pacientes, estas herramientas mejoran la efectividad de la comunicación para los profesionales de la salud. Ideal para consultorios médicos e investigaciones.`,
         icon: 'tabler:vaccine',
       },
       {
-        title: 'Fashion Design',
+        title: 'Diseño de Moda',
         description:
-          'With attention to detail, customization, and contemporary design, they empower designers to showcase ideas cohesively. Ideal for all levels of designers.',
+          'Con atención al detalle, personalización y diseño contemporáneo, empoderan a los diseñadores para mostrar ideas de manera cohesiva. Ideal para diseñadores de todos los niveles.',
         icon: 'tabler:tie',
       },
     ]}
   />
 
-  <!-- Content Widget **************** -->
+  <!-- Widget Contenido **************** -->
 
   <Content
     isReversed
     items={[
       {
-        title: 'High-Quality Designs',
+        title: 'Diseños de Alta Calidad',
         description:
-          'Our templates feature top-tier designs that ensure a professional and polished appearance for your projects.',
+          'Nuestras plantillas presentan diseños de primer nivel que aseguran una apariencia profesional y pulida para tus proyectos.',
         icon: 'tabler:wand',
       },
       {
-        title: 'Customization Tools',
+        title: 'Herramientas de Personalización',
         description:
-          'Tailor each template to your unique needs with user-friendly customization tools that let you personalize colors, fonts, and content.',
+          'Adapta cada plantilla a tus necesidades únicas con herramientas de personalización fáciles de usar que te permiten personalizar colores, fuentes y contenido.',
         icon: 'tabler:settings',
       },
       {
-        title: 'Pre-Designed Elements',
+        title: 'Elementos Prediseñados',
         description:
-          'Save time and effort with our ready-to-use elements, including graphics, icons, and layouts that enhance the visual appeal of your creations.',
+          'Ahorra tiempo y esfuerzo con nuestros elementos listos para usar, incluyendo gráficos, iconos y diseños que mejoran el atractivo visual de tus creaciones.',
         icon: 'tabler:presentation',
       },
       {
-        title: 'Preview and Mockup Views',
+        title: 'Vistas Previas y Maquetas',
         description:
-          'Visualize the final outcome before making any changes using our preview and mockup views, ensuring your projects meet your expectations.',
+          'Visualiza el resultado final antes de realizar cambios utilizando nuestras vistas previas y maquetas, asegurando que tus proyectos cumplan con tus expectativas.',
         icon: 'tabler:carousel-horizontal',
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-      alt: 'Features Image',
+      alt: 'Imagen de Características',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Main Features</h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Características Principales</h3>
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
+  <!-- Widget Contenido **************** -->
 
   <Content
     isAfterContent
     items={[
       {
-        title: 'Time Savings',
+        title: 'Ahorro de Tiempo',
         description:
-          'Streamline your workflow, enabling you to create stunning materials efficiently and allocate more time to your core tasks.',
+          'Optimiza tu flujo de trabajo, permitiéndote crear materiales impresionantes de manera eficiente y dedicar más tiempo a tus tareas principales.',
         icon: 'tabler:clock',
       },
       {
-        title: 'Professional Appearance',
+        title: 'Apariencia Profesional',
         description:
-          'Elevate your projects with the polished and sophisticated look that our templates provide, making a lasting impression on your audience.',
+          'Eleva tus proyectos con el aspecto pulido y sofisticado que proporcionan nuestras plantillas, causando una impresión duradera en tu audiencia.',
         icon: 'tabler:school',
       },
       {
-        title: 'Cost-Efficiency',
+        title: 'Eficiencia de Costos',
         description:
-          'Benefit from cost savings by avoiding the need for custom design work, as our templates offer professional-grade designs at a fraction of the cost.',
+          'Benefíciate del ahorro de costos evitando la necesidad de trabajo de diseño personalizado, ya que nuestras plantillas ofrecen diseños de calidad profesional a una fracción del costo.',
         icon: 'tabler:coin',
       },
       {
-        title: 'Instant Download',
+        title: 'Descarga Instantánea',
         description:
-          'Enjoy immediate access to your chosen templates upon purchase, enabling you to begin working on your projects without delay.',
+          'Disfruta de acceso inmediato a las plantillas elegidas después de la compra, lo que te permite comenzar a trabajar en tus proyectos sin demora.',
         icon: 'tabler:file-download',
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Benefits Image',
+      alt: 'Imagen de Beneficios',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Benefits</h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Beneficios</h3>
     </Fragment>
   </Content>
 
-  <!-- Testimonials Widget *********** -->
+  <!-- Widget Testimonios *********** -->
 
   <Testimonials
-    title="Words from real customers"
+    title="Palabras de clientes reales"
     testimonials={[
       {
-        testimonial: `The designs are not only visually appealing but also highly professional. The templates have saved me a significant amount of time while helping me make a lasting impression on my clients.`,
+        testimonial: `Los diseños no solo son visualmente atractivos sino también altamente profesionales. Las plantillas me han ahorrado una cantidad significativa de tiempo mientras me ayudan a causar una impresión duradera en mis clientes.`,
         name: 'Emily Kennedy',
-        job: 'Front-end developer',
+        job: 'Desarrolladora front-end',
         image: {
           src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
-          alt: 'Emily Kennedy Image',
+          alt: 'Imagen de Emily Kennedy',
         },
       },
       {
-        testimonial: `It beautifully showcases my work, with its clean and elegant design that lets my photographs shine. Customization was a breeze, even for a non-tech person like me. The result is a professional and immersive portfolio that's garnered numerous compliments.`,
+        testimonial: `Muestra maravillosamente mi trabajo, con su diseño limpio y elegante que permite que mis fotografías brillen. La personalización fue muy fácil, incluso para una persona no técnica como yo. El resultado es un portafolio profesional e inmersivo que ha recibido numerosos cumplidos.`,
         name: 'Sarah Hansen',
-        job: 'Photographer',
+        job: 'Fotógrafa',
         image: {
           src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Sarah Hansen Image',
+          alt: 'Imagen de Sarah Hansen',
         },
       },
       {
-        testimonial: `I discovered these templates and I'm impressed by their variety and quality. They've helped me establish a consistent brand image across my marketing and social platforms, elevating my business's overall appearance.`,
+        testimonial: `Descubrí estas plantillas y estoy impresionado por su variedad y calidad. Me han ayudado a establecer una imagen de marca consistente en mis plataformas de marketing y redes sociales, elevando la apariencia general de mi negocio.`,
         name: 'Mark Wilkinson',
-        job: 'Small business owner',
+        job: 'Propietario de pequeña empresa',
         image: {
           src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
-          alt: 'Mark Wilkinson Image',
+          alt: 'Imagen de Mark Wilkinson',
         },
       },
     ]}
     callToAction={{
       target: '_blank',
-      text: 'More testimonials...',
+      text: 'Más testimonios...',
       href: 'https://github.com/onwidget/astrowind',
       icon: 'tabler:chevron-right',
     }}
   />
 
-  <!-- CallToAction Widget *********** -->
+  <!-- Widget CallToAction *********** -->
 
   <CallToAction
     actions={[
       {
         variant: 'primary',
-        text: 'Start exploring',
+        text: 'Comienza a explorar',
         href: '/',
       },
     ]}
-    title="Dive into our template collection"
-    subtitle="Whether you're in business, design, or education, our templates are here to elevate your projects."
+    title="Sumérgete en nuestra colección de plantillas"
+    subtitle="Ya sea que estés en negocios, diseño o educación, nuestras plantillas están aquí para elevar tus proyectos."
   />
 </Layout>

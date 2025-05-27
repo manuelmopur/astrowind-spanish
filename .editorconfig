@@ -1,6 +1,6 @@
 # https://EditorConfig.org
 
-# top-most EditorConfig file
+# archivo EditorConfig de nivel superior
 root = true
 
 [*]

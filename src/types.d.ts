@@ -2,10 +2,10 @@ import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
 import type { HTMLAttributes, ImageMetadata } from 'astro/types';
 
 export interface Post {
-  /** A unique ID number that identifies a post. */
+  /** Un número de ID único que identifica una publicación. */
   id: string;
 
-  /** A post’s unique slug – part of the post’s URL based on its name, i.e. a post called “My Sample Page” has a slug “my-sample-page”. */
+  /** El slug único de una publicación: parte de la URL de la publicación basada en su nombre, es decir, una publicación llamada "Mi Página de Ejemplo" tiene un slug "mi-pagina-de-ejemplo". */
   slug: string;
 
   /**  */
@@ -18,7 +18,7 @@ export interface Post {
 
   /**  */
   title: string;
-  /** Optional summary of post content. */
+  /** Resumen opcional del contenido de la publicación. */
   excerpt?: string;
   /**  */
   image?: ImageMetadata | string;
@@ -180,7 +180,7 @@ export interface Disclaimer {
   label?: string;
 }
 
-// COMPONENTS
+// COMPONENTES
 export interface CallToAction extends Omit<HTMLAttributes<'a'>, 'slot'> {
   variant?: 'primary' | 'secondary' | 'tertiary' | 'link';
   text?: string;

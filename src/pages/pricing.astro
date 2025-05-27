@@ -8,30 +8,30 @@ import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Pricing',
+  title: 'Precios',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
+  <!-- Componente HeroText ******************* -->
 
   <HeroText
-    tagline="Pricing"
-    title="Stellar Pricing for Every Journey"
-    subtitle="Choose the perfect plan that aligns with your cosmic goals."
+    tagline="Precios"
+    title="Precios Estelares para Cada Viaje"
+    subtitle="Elige el plan perfecto que se alinee con tus objetivos cósmicos."
   />
 
-  <!-- Pricing Widget ******************* -->
+  <!-- Componente Pricing ******************* -->
 
   <Prices
-    title="Our prices"
-    subtitle="Only pay for what you need"
+    title="Nuestros precios"
+    subtitle="Paga solo por lo que necesitas"
     prices={[
       {
-        title: 'basic',
-        subtitle: 'Optimal choice for personal use',
+        title: 'básico',
+        subtitle: 'Opción óptima para uso personal',
         price: 29,
-        period: 'per month',
+        period: 'por mes',
         items: [
           {
             description: 'Etiam in libero, et volutpat',
@@ -48,15 +48,15 @@ const metadata = {
         ],
         callToAction: {
           target: '_blank',
-          text: 'Get started',
+          text: 'Comenzar',
           href: '#',
         },
       },
       {
-        title: 'standard',
-        subtitle: 'Optimal choice for small teams',
+        title: 'estándar',
+        subtitle: 'Opción óptima para equipos pequeños',
         price: 69,
-        period: 'Per Month',
+        period: 'por mes',
         items: [
           {
             description: 'Proin vel laoreet',
@@ -76,7 +76,7 @@ const metadata = {
         ],
         callToAction: {
           target: '_blank',
-          text: 'Get started',
+          text: 'Comenzar',
           href: '#',
         },
         hasRibbon: true,
@@ -84,9 +84,9 @@ const metadata = {
       },
       {
         title: 'premium',
-        subtitle: 'Optimal choice for companies',
+        subtitle: 'Opción óptima para empresas',
         price: 199,
-        period: 'Per Month',
+        period: 'por mes',
         items: [
           {
             description: 'Curabitur suscipit risus',
@@ -103,140 +103,140 @@ const metadata = {
         ],
         callToAction: {
           target: '_blank',
-          text: 'Get started',
+          text: 'Comenzar',
           href: '#',
         },
       },
     ]}
   />
 
-  <!-- Features3 Widget ************** -->
+  <!-- Componente Features3 ************** -->
 
   <Features3
-    title="Price-related features"
-    subtitle="Discover the advantages of choosing our plans"
+    title="Características relacionadas con el precio"
+    subtitle="Descubre las ventajas de elegir nuestros planes"
     columns={2}
     items={[
       {
-        title: 'Tiered Pricing Plans',
-        description: 'Choose from a range of pricing plans designed to accommodate different budgets and requirements.',
+        title: 'Planes de Precios por Niveles',
+        description: 'Elige entre una variedad de planes de precios diseñados para adaptarse a diferentes presupuestos y requisitos.',
         icon: 'tabler:stairs',
       },
       {
-        title: 'Transparent Pricing',
-        description: 'Clearly displayed pricing details for each plan, with no hidden costs or unexpected charges.',
+        title: 'Precios Transparentes',
+        description: 'Detalles de precios claramente mostrados para cada plan, sin costos ocultos ni cargos inesperados.',
         icon: 'tabler:flip-vertical',
       },
       {
-        title: 'Secure Payment Methods',
-        description: 'Secure payment gateways to protect your financial information during transactions.',
+        title: 'Métodos de Pago Seguros',
+        description: 'Pasarelas de pago seguras para proteger tu información financiera durante las transacciones.',
         icon: 'tabler:shield-lock',
       },
       {
-        title: 'Instant Access',
-        description: `Immediate access to your chosen plan's features and templates upon subscription.`,
+        title: 'Acceso Instantáneo',
+        description: "Acceso inmediato a las características y plantillas de tu plan elegido al suscribirte.",
         icon: 'tabler:accessible',
       },
       {
-        title: 'Upgrade Value',
-        description: 'Upgrade to higher-tier plans to unlock more features and benefits for an enhanced experience.',
+        title: 'Valor de Actualización',
+        description: 'Actualiza a planes de nivel superior para desbloquear más características y beneficios para una experiencia mejorada.',
         icon: 'tabler:chevrons-up',
       },
       {
-        title: '24H support',
-        description: 'Questions answered via live chat, email or phone, every calendar day.',
+        title: 'Soporte 24H',
+        description: 'Preguntas respondidas por chat en vivo, correo electrónico o teléfono, todos los días calendario.',
         icon: 'tabler:headset',
       },
     ]}
     classes={{ container: 'max-w-5xl' }}
   />
 
-  <!-- Steps Widget ****************** -->
+  <!-- Componente Steps ****************** -->
 
   <Steps
-    title="A guided journey from plans to creativity"
-    tagline="simplified process"
+    title="Un viaje guiado desde los planes hasta la creatividad"
+    tagline="proceso simplificado"
     isReversed={true}
     items={[
       {
-        title: 'Explore plans',
+        title: 'Explorar planes',
         icon: 'tabler:number-1',
       },
       {
-        title: 'Select a plan',
+        title: 'Seleccionar un plan',
         icon: 'tabler:number-2',
       },
       {
-        title: 'Sign Up / Log In',
+        title: 'Registrarse / Iniciar Sesión',
         icon: 'tabler:number-3',
       },
       {
-        title: 'Review order',
+        title: 'Revisar pedido',
         icon: 'tabler:number-4',
       },
       {
-        title: 'Enter payment details',
+        title: 'Ingresar detalles de pago',
         icon: 'tabler:number-5',
       },
       {
-        title: 'Confirmation',
+        title: 'Confirmación',
         icon: 'tabler:number-6',
       },
       {
-        title: 'Download and start using the template(s)',
+        title: 'Descargar y comenzar a usar la(s) plantilla(s)',
         icon: 'tabler:number-7',
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
+      alt: 'Imagen de Pasos',
     }}
   />
 
-  <!-- FAQs Widget ******************* -->
+  <!-- Componente FAQs ******************* -->
 
   <FAQs
-    title="Pricing FAQs"
-    subtitle="Choosing the right plan is important, and we're here to answer your questions. If you have queries about our pricing options, you're in the right place."
+    title="Preguntas Frecuentes sobre Precios"
+    subtitle="Elegir el plan correcto es importante, y estamos aquí para responder tus preguntas. Si tienes consultas sobre nuestras opciones de precios, estás en el lugar correcto."
     columns={1}
     items={[
       {
-        title: 'Do the plans come with customer support?',
+        title: '¿Los planes incluyen soporte al cliente?',
         description:
-          'Absolutely, all plans include access to our dedicated customer support to assist you with any queries or concerns.',
+          'Absolutamente, todos los planes incluyen acceso a nuestro dedicado soporte al cliente para ayudarte con cualquier consulta o inquietud.',
       },
       {
-        title: 'Is there a trial period for the different plans?',
+        title: '¿Hay un período de prueba para los diferentes planes?',
         description:
-          "Unfortunately, we don't offer trial periods for the plans. However, you can check out our demo section to preview the quality of our templates.",
+          "Desafortunadamente, no ofrecemos períodos de prueba para los planes. Sin embargo, puedes consultar nuestra sección de demostración para previsualizar la calidad de nuestras plantillas.",
       },
       {
-        title: 'Can I switch between plans?',
+        title: '¿Puedo cambiar entre planes?',
         description:
-          'Certainly! You can easily upgrade or downgrade your plan, at any time, to find the one that best suits your evolving requirements.',
+          '¡Claro! Puedes actualizar o degradar fácilmente tu plan, en cualquier momento, para encontrar el que mejor se adapte a tus requisitos cambiantes.',
       },
       {
-        title: 'What payment methods do you accept?',
+        title: '¿Qué métodos de pago aceptan?',
         description:
-          'We accept major credit cards and online payment methods to ensure a convenient and secure transaction process.',
+          'Aceptamos las principales tarjetas de crédito y métodos de pago en línea para garantizar un proceso de transacción conveniente y seguro.',
       },
       {
-        title: 'Are there any hidden fees beyond the displayed cost?',
+        title: '¿Hay alguna tarifa oculta más allá del costo mostrado?',
         description:
-          'No, the subscription cost covers all the features and templates listed under each plan. There are no hidden fees or extra charges.',
+          'No, el costo de la suscripción cubre todas las características y plantillas enumeradas en cada plan. No hay tarifas ocultas ni cargos adicionales.',
       },
     ]}
   />
 
-  <!-- CallToAction Widget *********** -->
+  <!-- Componente CallToAction *********** -->
 
   <CallToAction
-    title="Ready to boost your projects?"
-    subtitle="Join our community of satisfied customers who have transformed their work with our templates."
+    title="¿Listo para impulsar tus proyectos?"
+    subtitle="Únete a nuestra comunidad de clientes satisfechos que han transformado su trabajo con nuestras plantillas."
     actions={[
       {
         variant: 'primary',
-        text: 'Get started now',
+        text: 'Comenzar ahora',
         href: '/',
       },
     ]}

@@ -17,7 +17,7 @@ export const trim = (str = '', ch?: string) => {
   return start > 0 || end < str.length ? str.substring(start, end) : str;
 };
 
-// Function to format a number in thousands (K) or millions (M) format depending on its value
+// Función para formatear un número en formato de miles (K) o millones (M) dependiendo de su valor
 export const toUiAmount = (amount: number) => {
   if (!amount) return 0;
 

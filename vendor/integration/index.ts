@@ -63,9 +63,9 @@ export default ({ config: _themeConfig = 'src/config.yaml' } = {}): AstroIntegra
         if (typeof _themeConfig === 'string') {
           addWatchFile(new URL(_themeConfig, config.root));
 
-          buildLogger.info(`Astrowind \`${_themeConfig}\` has been loaded.`);
+          buildLogger.info(`Astrowind \`${_themeConfig}\` ha sido cargado.`);
         } else {
-          buildLogger.info(`Astrowind config has been loaded.`);
+          buildLogger.info(`La configuración de Astrowind ha sido cargada.`);
         }
       },
       'astro:config:done': async ({ config }) => {
@@ -74,7 +74,7 @@ export default ({ config: _themeConfig = 'src/config.yaml' } = {}): AstroIntegra
 
       'astro:build:done': async ({ logger }) => {
         const buildLogger = logger.fork('astrowind');
-        buildLogger.info('Updating `robots.txt` with `sitemap-index.xml` ...');
+        buildLogger.info('Actualizando `robots.txt` con `sitemap-index.xml` ...');
 
         try {
           const outDir = cfg.outDir;
@@ -108,7 +108,7 @@ export default ({ config: _themeConfig = 'src/config.yaml' } = {}): AstroIntegra
           }
           // eslint-disable-next-line @typescript-eslint/no-unused-vars
         } catch (error) {
-          /* empty */
+          /* vacío */
         }
       },
     },

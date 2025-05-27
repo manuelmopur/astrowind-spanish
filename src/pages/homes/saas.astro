@@ -13,7 +13,7 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 
 const metadata = {
-  title: 'SaaS Landing Page',
+  title: 'Página de Aterrizaje SaaS',
 };
 ---
 
@@ -24,12 +24,12 @@ const metadata = {
       actions={[
         {
           variant: 'secondary',
-          text: 'Login',
+          text: 'Iniciar Sesión',
           href: '#',
         },
         {
           variant: 'primary',
-          text: 'Sign Up',
+          text: 'Registrarse',
           href: '#',
         },
       ]}
@@ -37,101 +37,101 @@ const metadata = {
     />
   </Fragment>
 
-  <!-- Hero2 Widget ******************* -->
+  <!-- Widget Hero2 ******************* -->
 
   <Hero2
-    tagline="SaaS Web Demo"
+    tagline="Demostración Web SaaS"
     actions={[
-      { variant: 'primary', target: '_blank', text: 'Get Started', href: 'https://github.com/onwidget/astrowind' },
-      { text: 'Learn more', href: '#features' },
+      { variant: 'primary', target: '_blank', text: 'Comenzar', href: 'https://github.com/onwidget/astrowind' },
+      { text: 'Saber más', href: '#features' },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1580481072645-022f9a6dbf27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'AstroWind Hero Image',
+      alt: 'Imagen Hero de AstroWind',
     }}
   >
     <Fragment slot="title">
-      Simplify web design with Astrowind: <br /> your ultimate <span class="text-accent dark:text-white"
+      Simplifica el diseño web con Astrowind: <br /> tu compañero <span class="text-accent dark:text-white"
         >SaaS</span
-      > companion<br />
+      > definitivo<br />
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        Elevate your website creation process with <span class="font-semibold">AstroWind</span>'s SaaS solutions.</span
+        Eleva tu proceso de creación de sitios web con las soluciones SaaS de <span class="font-semibold">AstroWind</span>.</span
       >
-      Seamlessly blend the power of Astro 5.0 and Tailwind CSS to craft websites that resonate with your brand and audience.
+      Combina sin problemas el poder de Astro 5.0 y Tailwind CSS para crear sitios web que resuenen con tu marca y audiencia.
     </Fragment>
   </Hero2>
 
-  <!-- Features Widget *************** -->
+  <!-- Widget Features *************** -->
 
   <Features
     id="features"
-    title="Why choose AstroWind?"
-    subtitle="Each of the following features enhances AstroWind's value proposition."
+    title="¿Por qué elegir AstroWind?"
+    subtitle="Cada una de las siguientes características mejora la propuesta de valor de AstroWind."
     columns={2}
     items={[
       {
-        title: 'Integration of Astro 5.0 and Tailwind CSS',
+        title: 'Integración de Astro 5.0 y Tailwind CSS',
         description:
-          'Offers a powerful combination that enhances both the development process and the end-user experience. Also, allows to build dynamic and visually stunning websites with optimized performance.',
+          'Ofrece una combinación poderosa que mejora tanto el proceso de desarrollo como la experiencia del usuario final. Además, permite construir sitios web dinámicos y visualmente impresionantes con un rendimiento optimizado.',
         icon: 'tabler:layers-union',
       },
       {
-        title: 'Versatile design for startups, small businesses, and more',
-        description: `Easily customize AstroWind to harmonize with the unique branding and identity of your venture. AstroWind's versatile design adapts to suit your needs.`,
+        title: 'Diseño versátil para startups, pequeñas empresas y más',
+        description: `Personaliza fácilmente AstroWind para armonizar con la marca e identidad únicas de tu empresa. El diseño versátil de AstroWind se adapta a tus necesidades.`,
         icon: 'tabler:artboard',
       },
       {
-        title: 'Effortless customization for portfolios and marketing sites',
+        title: 'Personalización sin esfuerzo para portafolios y sitios de marketing',
         description:
-          'With intuitive customization, easily showcase portfolio pieces, case studies, project highlights, and relevant content. Ideal for creative professionals and businesses looking to highlight their expertise.',
+          'Con una personalización intuitiva, muestra fácilmente piezas de portafolio, estudios de caso, destacados de proyectos y contenido relevante. Ideal para profesionales creativos y empresas que buscan destacar su experiencia.',
         icon: 'tabler:writing',
       },
       {
-        title: 'Optimized landing pages and engaging blogs',
-        description: `Landing pages are strategically designed to captivate visitors and prompt specific actions. Additionally, the blog creation feature empowers sharing insights, engaging the audience.`,
+        title: 'Páginas de aterrizaje optimizadas y blogs atractivos',
+        description: `Las páginas de aterrizaje están diseñadas estratégicamente para cautivar a los visitantes e impulsar acciones específicas. Además, la función de creación de blogs permite compartir ideas y atraer a la audiencia.`,
         icon: 'tabler:podium',
       },
       {
-        title: 'Fast loading times and production-ready code',
-        description: `Using Astro 5.0 ensures fast loading and seamless rendering, enhancing browsing. The code follows best practices, improving user experience, SEO, and reducing bounce rates.`,
+        title: 'Tiempos de carga rápidos y código listo para producción',
+        description: `Usar Astro 5.0 asegura una carga rápida y una representación fluida, mejorando la navegación. El código sigue las mejores prácticas, mejorando la experiencia del usuario, el SEO y reduciendo las tasas de rebote.`,
         icon: 'tabler:rocket',
       },
       {
-        title: 'SEO-optimized structure for enhanced visibility',
-        description: `Follows SEO best practices with clean code, semantic HTML markup, and fast loading, enhancing search engine rankings. AstroWind's SEO structure ensures visibility to potential customers and clients.`,
+        title: 'Estructura optimizada para SEO para una visibilidad mejorada',
+        description: `Sigue las mejores prácticas de SEO con código limpio, marcado HTML semántico y carga rápida, mejorando el posicionamiento en motores de búsqueda. La estructura SEO de AstroWind asegura la visibilidad para clientes potenciales.`,
         icon: 'tabler:eyeglass',
       },
     ]}
   />
 
-  <!-- Content Widget **************** -->
+  <!-- Widget Content **************** -->
 
   <Content
-    title="Use cases"
-    subtitle="Discover how AstroWind's versatile template serves as the ideal solution for various use cases, providing tailored solutions to drive success."
+    title="Casos de uso"
+    subtitle="Descubre cómo la plantilla versátil de AstroWind sirve como la solución ideal para diversos casos de uso, proporcionando soluciones personalizadas para impulsar el éxito."
     isReversed
     items={[
       {
-        title: 'Description:',
+        title: 'Descripción:',
         description:
-          'Are you a startup with big dreams? AstroWind propels your success. Our template forges a seamless online presence, attracting investors and customers from day one. Astro 5.0 and Tailwind CSS ensure striking, responsive sites, leaving lasting impressions. Countless startups leverage AstroWind to kickstart their journey and resonate with audiences.',
+          '¿Eres una startup con grandes sueños? AstroWind impulsa tu éxito. Nuestra plantilla forja una presencia online fluida, atrayendo inversores y clientes desde el primer día. Astro 5.0 y Tailwind CSS aseguran sitios impactantes y responsivos, dejando impresiones duraderas. Innumerables startups aprovechan AstroWind para iniciar su viaje y resonar con las audiencias.',
       },
       {
-        title: 'Benefits:',
-        description: `Allow startups to quickly create professional websites without investing extensive time and resources. <br /> Make a memorable first impression with visually appealing design elements that highlight your startup's unique value proposition. <br /> Ensures your website looks stunning and works well on all devices. <br /> Engage potential investors and customers with engaging content, clear messaging, and intuitive navigation.`,
+        title: 'Beneficios:',
+        description: `Permite a las startups crear rápidamente sitios web profesionales sin invertir mucho tiempo y recursos. <br /> Causa una primera impresión memorable con elementos de diseño visualmente atractivos que destacan la propuesta de valor única de tu startup. <br /> Asegura que tu sitio web se vea impresionante y funcione bien en todos los dispositivos. <br /> Atrae a inversores y clientes potenciales con contenido atractivo, mensajes claros y navegación intuitiva.`,
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1620558138198-cfb9b4f3c294?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1671&q=80',
-      alt: 'Startup Image',
+      alt: 'Imagen de Startup',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Startup success stories: <br /><span class="text-2xl">Launching with AstroWind</span>
+        Historias de éxito de startups: <br /><span class="text-2xl">Lanzando con AstroWind</span>
       </h3>
     </Fragment>
 
@@ -140,28 +140,28 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
+  <!-- Widget Content **************** -->
 
   <Content
     isAfterContent={true}
     items={[
       {
-        title: 'Description:',
-        description: `For SaaS businesses, user experience is key. AstroWind enhances showcasing SaaS solutions intuitively. The template's Astro 5.0 and Tailwind CSS integration guarantees user-friendly experience, mirroring your software's efficiency. Customize pages to communicate SaaS value and solutions for your audience.`,
+        title: 'Descripción:',
+        description: `Para las empresas SaaS, la experiencia del usuario es clave. AstroWind mejora la presentación de soluciones SaaS de forma intuitiva. La integración de Astro 5.0 y Tailwind CSS de la plantilla garantiza una experiencia fácil de usar, reflejando la eficiencia de tu software. Personaliza las páginas para comunicar el valor y las soluciones SaaS para tu audiencia.`,
       },
       {
-        title: 'Benefits:',
-        description: `Ensuring a cohesive and user-centric design for your SaaS website. <br /> Effectively communicate complex SaaS features through visual aids, animations, and interactive elements. <br /> Prioritize user needs and pain points through well-structured layouts and clear navigation. <br /> Encourage visitors to take action with strategically placed CTAs. <br /> Ensures your SaaS website works seamlessly across all devices.`,
+        title: 'Beneficios:',
+        description: `Asegurando un diseño cohesivo y centrado en el usuario para tu sitio web SaaS. <br /> Comunica eficazmente características SaaS complejas a través de ayudas visuales, animaciones y elementos interactivos. <br /> Prioriza las necesidades y puntos débiles del usuario a través de diseños bien estructurados y una navegación clara. <br /> Anima a los visitantes a tomar medidas con CTAs estratégicamente ubicados. <br /> Asegura que tu sitio web SaaS funcione sin problemas en todos los dispositivos.`,
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1531973486364-5fa64260d75b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1658&q=80',
-      alt: 'SaaS Businesses Image',
+      alt: 'Imagen de Empresas SaaS',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        SaaS showcase: <br /><span class="text-2xl">Streamlining user experience</span>
+        Escaparate SaaS: <br /><span class="text-2xl">Optimizando la experiencia del usuario</span>
       </h3>
     </Fragment>
 
@@ -170,29 +170,29 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
+  <!-- Widget Content **************** -->
 
   <Content
     isReversed
     isAfterContent={true}
     items={[
       {
-        title: 'Description:',
-        description: `Your portfolio is your masterpiece, and AstroWind is your canvas. Whether you're a designer, photographer, artist, or any other creative professional, AstroWind empowers you to showcase your work with elegance and sophistication. Tailored to highlight your creative projects, AstroWind's templates offer a visually immersive experience that lets your portfolio shine.`,
+        title: 'Descripción:',
+        description: `Tu portafolio es tu obra maestra, y AstroWind es tu lienzo. Ya seas diseñador, fotógrafo, artista o cualquier otro profesional creativo, AstroWind te permite mostrar tu trabajo con elegancia y sofisticación. Diseñadas para destacar tus proyectos creativos, las plantillas de AstroWind ofrecen una experiencia visualmente inmersiva que permite que tu portafolio brille.`,
       },
       {
-        title: 'Benefits:',
-        description: `Serve as a captivating backdrop to showcase your creative work, capturing attention and leaving a lasting impression. <br /> Tailor your portfolio to reflect your unique style and artistic vision. <br /> Prioritizes visuals, allowing you to present your work in high-resolution detail that draws viewers into your creations. <br /> Enables seamless navigation for effortless portfolio exploration.`,
+        title: 'Beneficios:',
+        description: `Sirve como un telón de fondo cautivador para mostrar tu trabajo creativo, captando la atención y dejando una impresión duradera. <br /> Adapta tu portafolio para reflejar tu estilo único y visión artística. <br /> Prioriza lo visual, permitiéndote presentar tu trabajo con detalles de alta resolución que atraen a los espectadores a tus creaciones. <br /> Permite una navegación fluida para una exploración del portafolio sin esfuerzo.`,
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Portfolio Image',
+      alt: 'Imagen de Portafolio',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Creative portfolios: <br /><span class="text-2xl">Highlighting your work</span>
+        Portafolios creativos: <br /><span class="text-2xl">Destacando tu trabajo</span>
       </h3>
     </Fragment>
 
@@ -201,27 +201,27 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
+  <!-- Widget Content **************** -->
 
   <Content
     items={[
       {
-        title: 'Description:',
-        description: `For small businesses, a well-crafted website can be a game-changer. AstroWind empowers small businesses to not only establish a credible online presence but also convert visitors into loyal customers. The template's thoughtful design and optimization features ensure that your website doesn't just attract attention but also guides visitors through a seamless journey, ultimately leading to conversions.`,
+        title: 'Descripción:',
+        description: `Para las pequeñas empresas, un sitio web bien diseñado puede cambiar las reglas del juego. AstroWind permite a las pequeñas empresas no solo establecer una presencia online creíble, sino también convertir visitantes en clientes leales. El diseño cuidado y las características de optimización de la plantilla aseguran que tu sitio web no solo atraiga la atención, sino que también guíe a los visitantes a través de un viaje fluido, que finalmente conduce a conversiones.`,
       },
       {
-        title: 'Benefits:',
-        description: `Present your small business with a professional and polished website that instills confidence and trust among visitors. <br /> Strategically placed CTAs, user-friendly forms, and optimized layouts work together to drive user engagement and conversions. <br /> Ensure a smooth browsing experience, reducing bounce rates and encouraging interaction.`,
+        title: 'Beneficios:',
+        description: `Presenta tu pequeña empresa con un sitio web profesional y pulido que infunda confianza entre los visitantes. <br /> CTAs estratégicamente ubicados, formularios fáciles de usar y diseños optimizados trabajan juntos para impulsar la participación del usuario y las conversiones. <br /> Asegura una experiencia de navegación fluida, reduciendo las tasas de rebote y fomentando la interacción.`,
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1514621166532-aa7eb1a3a2f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Small Business Image',
+      alt: 'Imagen de Pequeña Empresa',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Small business growth: <br /><span class="text-2xl">Converting visitors into customers</span>
+        Crecimiento de pequeñas empresas: <br /><span class="text-2xl">Convirtiendo visitantes en clientes</span>
       </h3>
     </Fragment>
 
@@ -230,74 +230,74 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Pricing Widget ******************* -->
+  <!-- Widget Pricing ******************* -->
 
   <Pricing
-    title="Flexible pricing plans"
+    title="Planes de precios flexibles"
     prices={[
       {
-        title: 'free',
-        subtitle: 'Access to core features and a wide range of templates',
+        title: 'gratis',
+        subtitle: 'Acceso a características principales y una amplia gama de plantillas',
         price: '0',
-        period: '/ month',
+        period: '/ mes',
         callToAction: {
           target: '_blank',
-          text: 'Get Started for Free',
+          text: 'Comenzar Gratis',
           href: '#',
         },
       },
       {
         title: 'pro',
-        subtitle: 'Premium templates and advanced customization',
+        subtitle: 'Plantillas premium y personalización avanzada',
         price: 15,
-        period: '/ Month',
+        period: '/ mes',
         callToAction: {
           target: '_blank',
-          text: 'Upgrade to Pro',
+          text: 'Actualizar a Pro',
           href: '#',
         },
         hasRibbon: true,
         ribbonTitle: 'popular',
       },
       {
-        title: 'Enterprise',
-        subtitle: 'Tailored solutions for large-scale projects',
+        title: 'Empresarial',
+        subtitle: 'Soluciones a medida para proyectos a gran escala',
         price: 45,
-        period: '/ Month',
+        period: '/ mes',
         callToAction: {
           target: '_blank',
-          text: 'Unlock Enterprise Features',
+          text: 'Desbloquear Características Empresariales',
           href: '#',
         },
       },
     ]}
   />
 
-  <!-- FAQs Widget ******************* -->
+  <!-- Widget FAQs ******************* -->
 
   <FAQs
-    title="Frequently Asked Questions"
+    title="Preguntas Frecuentes"
     items={[
       {
-        title: 'Is AstroWind compatible with the latest versions of Astro and Tailwind CSS?',
+        title: '¿Es AstroWind compatible con las últimas versiones de Astro y Tailwind CSS?',
         description:
-          'Yes, AstroWind is designed to be compatible with the latest versions of both Astro and Tailwind CSS. This ensures that you can harness the full capabilities of these technologies while benefiting from the features offered by AstroWind.',
+          'Sí, AstroWind está diseñado para ser compatible con las últimas versiones de Astro y Tailwind CSS. Esto asegura que puedas aprovechar todas las capacidades de estas tecnologías mientras te beneficias de las características ofrecidas por AstroWind.',
         icon: 'tabler:chevrons-right',
       },
       {
-        title: 'Can I use AstroWind for both personal and commercial projects?',
-        description: `Certainly! AstroWind is versatile and can be used for a wide range of projects, including both personal and commercial endeavors. Whether you're building a professional portfolio, launching a startup, or creating a marketing website, AstroWind has you covered.`,
+        title: '¿Puedo usar AstroWind para proyectos personales y comerciales?',
+        description: `¡Claro! AstroWind es versátil y se puede utilizar para una amplia gama de proyectos, tanto personales como comerciales. Ya sea que estés construyendo un portafolio profesional, lanzando una startup o creando un sitio web de marketing, AstroWind te cubre.`,
         icon: 'tabler:chevrons-right',
       },
       {
-        title: 'What level of coding knowledge is required to use AstroWind?',
+        title: '¿Qué nivel de conocimiento de codificación se requiere para usar AstroWind?',
         description:
-          'While some familiarity with HTML, CSS, and web development concepts is helpful, the user-friendly interface and customization options allow those with limited coding experience to create impressive websites. For more advanced users, AstroWind offers extensive customization capabilities.',
+          'Si bien es útil tener cierta familiaridad con HTML, CSS y conceptos de desarrollo web, la interfaz fácil de usar y las opciones de personalización permiten a aquellos con experiencia limitada en codificación crear sitios web impresionantes. Para usuarios más avanzados, AstroWind ofrece amplias capacidades de personalización.',
         icon: 'tabler:chevrons-right',
       },
       {
-        title: 'Is customer support available for AstroWind users seeking guidance?',
-        description: `Absolutely, our dedicated customer support team is here to assist you with any questions or challenges you may encounter. Feel free to reach out to us through our support channels, and we'll be happy to provide the help you need.`,
+        title: '¿Hay soporte al cliente disponible para los usuarios de AstroWind que buscan orientación?',
+        description: `Absolutamente, nuestro dedicado equipo de soporte al cliente está aquí para ayudarte con cualquier pregunta o desafío que puedas encontrar. No dudes en contactarnos a través de nuestros canales de soporte, y estaremos encantados de brindarte la ayuda que necesitas.`,
         icon: 'tabler:chevrons-right',
       },
     ]}
@@ -307,40 +307,40 @@ const metadata = {
     </Fragment>
   </FAQs>
 
-  <!-- Steps2 Widget ****************** -->
+  <!-- Widget Steps2 ****************** -->
 
   <Steps2
-    title="Reach out to us"
-    subtitle="Have questions? Feel free to contact us using the form below. We're here to help!"
+    title="Contáctanos"
+    subtitle="¿Tienes preguntas? No dudes en contactarnos usando el formulario a continuación. ¡Estamos aquí para ayudar!"
     callToAction={{
-      text: 'Contact us',
+      text: 'Contáctanos',
       href: '/',
     }}
     items={[
       {
-        title: 'Email us',
+        title: 'Envíanos un correo electrónico',
         description: 'contact@support.com',
         icon: 'tabler:mail',
       },
       {
-        title: 'Call us',
+        title: 'Llámanos',
         description: '+1 (234) 567-890',
         icon: 'tabler:headset',
       },
       {
-        title: 'Follow us',
+        title: 'Síguenos',
         description: '@example',
         icon: 'tabler:brand-twitter',
       },
     ]}
   />
 
-  <!-- BlogLatestPost Widget **************** -->
+  <!-- Widget BlogLatestPosts **************** -->
 
   <BlogLatestPosts
     id="blog"
-    title="Stay informed with AstroWind's blog"
-    information={`Explore our collection of articles, guides, and tutorials on web development, design trends, and using AstroWind effectively for your projects.`}
+    title="Mantente informado con el blog de AstroWind"
+    information={`Explora nuestra colección de artículos, guías y tutoriales sobre desarrollo web, tendencias de diseño y cómo usar AstroWind de manera efectiva para tus proyectos.`}
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>

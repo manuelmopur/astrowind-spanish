@@ -14,39 +14,39 @@ import Brands from '~/components/widgets/Brands.astro';
 import { YouTube } from 'astro-embed';
 
 const metadata = {
-  title: 'Startup Landing Page',
+  title: 'Página de Aterrizaje para Startup',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+  <!-- Componente Hero ******************* -->
 
   <Hero
-    tagline="Startup Web Demo"
+    tagline="Demostración Web para Startup"
     actions={[
       {
         variant: 'primary',
         target: '_blank',
-        text: 'Get templates',
+        text: 'Obtener plantillas',
         href: 'https://github.com/onwidget/astrowind',
         icon: 'tabler:download',
       },
-      { text: 'Learn more', href: '#features' },
+      { text: 'Saber más', href: '#features' },
     ]}
   >
     <Fragment slot="title">
-      Improve <span class="hidden sm:inline">the online presence of</span> your <span
+      Mejora <span class="hidden sm:inline">la presencia online de</span> tu <span
         class="text-accent dark:text-white">Startup</span
-      > with Astrowind templates
+      > con las plantillas de Astrowind
     </Fragment>
 
     <Fragment slot="subtitle">
-      Step into the spotlight with <span class="font-semibold">Astrowind</span> templates, your pathway to fortifying your
-      startup's digital footprint, fostering credibility, and expanding your reach.
+      Entra en el centro de atención con las plantillas de <span class="font-semibold">Astrowind</span>, tu camino para fortalecer la
+      huella digital de tu startup, fomentar la credibilidad y expandir tu alcance.
     </Fragment>
 
     <Fragment slot="image">
-      <YouTube id="gxBkghlglTg" title="Astro just Launched.... Could it be the ultimate web framework?" />
+      <YouTube id="gxBkghlglTg" title="Astro acaba de lanzarse... ¿Podría ser el framework web definitivo?" />
       <style is:inline>
         lite-youtube {
           margin: 0 auto;
@@ -56,35 +56,35 @@ const metadata = {
     </Fragment>
   </Hero>
 
-  <!-- Features2 Widget ************** -->
+  <!-- Componente Features2 ************** -->
 
   <Features2
-    title="About us"
-    subtitle="We believe in the magic of turning dreams into stunning realities. Founded by passionate developers with a shared vision, we set out to simplify the website creation process. Our templates bring together the innovation of Astro 5.0 and the versatility of Tailwind CSS, enabling you to express your unique brand identity like never before."
+    title="Sobre nosotros"
+    subtitle="Creemos en la magia de convertir sueños en realidades impresionantes. Fundados por desarrolladores apasionados con una visión compartida, nos propusimos simplificar el proceso de creación de sitios web. Nuestras plantillas unen la innovación de Astro 5.0 y la versatilidad de Tailwind CSS, permitiéndote expresar tu identidad de marca única como nunca antes."
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Features2>
 
-  <!-- Stats Widget ****************** -->
+  <!-- Componente Stats ****************** -->
 
   <Stats
-    title="Discover the impressive impact of Astrowind"
-    subtitle="The numbers below reflect the trust our users have placed in us and the remarkable outcomes we've helped them achieve."
+    title="Descubre el impacto impresionante de Astrowind"
+    subtitle="Los números a continuación reflejan la confianza que nuestros usuarios han depositado en nosotros y los resultados notables que les hemos ayudado a lograr."
     stats={[
-      { title: 'Downloads', amount: '182K' },
-      { title: 'Websites Launched', amount: '87' },
-      { title: 'User Ratings', amount: '4.8' },
-      { title: 'Satisfied Clients', amount: '116K' },
+      { title: 'Descargas', amount: '182K' },
+      { title: 'Sitios Web Lanzados', amount: '87' },
+      { title: 'Calificaciones de Usuarios', amount: '4.8' },
+      { title: 'Clientes Satisfechos', amount: '116K' },
     ]}
   />
 
-  <!-- Brands Widget ****************** -->
+  <!-- Componente Brands ****************** -->
 
   <Brands
-    title="Partnerships & Collaborations"
-    subtitle="At Astrowind, we believe in the power of collaboration to drive innovation and create exceptional experiences."
+    title="Asociaciones y Colaboraciones"
+    subtitle="En Astrowind, creemos en el poder de la colaboración para impulsar la innovación y crear experiencias excepcionales."
     icons={[]}
     images={[
       {
@@ -127,28 +127,28 @@ const metadata = {
     ]}
   />
 
-  <!-- Features2 Widget ************** -->
+  <!-- Componente Features2 ************** -->
 
   <Features2
-    title="What services do we provide?"
-    subtitle="We offer a wide range of website templates that suit various industries and purposes such as business, portfolio, e-commerce, blog, etc."
+    title="¿Qué servicios ofrecemos?"
+    subtitle="Ofrecemos una amplia gama de plantillas de sitios web que se adaptan a diversas industrias y propósitos, como negocios, portafolios, comercio electrónico, blogs, etc."
     items={[
       {
-        title: 'Installation Instructions',
+        title: 'Instrucciones de Instalación',
         description:
-          'Offer clear instructions on how to download the purchased templates and install them on various website platforms or content management systems.',
+          'Ofrecer instrucciones claras sobre cómo descargar las plantillas compradas e instalarlas en diversas plataformas de sitios web o sistemas de gestión de contenido.',
         icon: 'flat-color-icons:document',
       },
       {
-        title: 'Demo and Previews',
+        title: 'Demostración y Vistas Previas',
         description:
-          'Provide interactive demos and previews that allow customers to see how their chosen template will look and function before making a purchase.',
+          'Proporcionar demostraciones interactivas y vistas previas que permitan a los clientes ver cómo se verá y funcionará la plantilla elegida antes de realizar una compra.',
         icon: 'flat-color-icons:template',
       },
       {
-        title: 'Technical Support',
+        title: 'Soporte Técnico',
         description:
-          'Providing customer support for any technical issues related to the templates or their implementation.',
+          'Proporcionar soporte al cliente para cualquier problema técnico relacionado con las plantillas o su implementación.',
         icon: 'flat-color-icons:voice-presentation',
       },
     ]}
@@ -158,84 +158,84 @@ const metadata = {
     </Fragment>
   </Features2>
 
-  <!-- Features Widget *************** -->
+  <!-- Componente Features *************** -->
 
   <Features
     id="features"
-    title="Main features of our templates"
-    subtitle="Possess several key characteristics to effectively cater to the needs of startups and entrepreneurs."
+    title="Características principales de nuestras plantillas"
+    subtitle="Poseen varias características clave para satisfacer eficazmente las necesidades de startups y emprendedores."
     columns={3}
     items={[
       {
-        title: 'Modern and Professional Design',
+        title: 'Diseño Moderno y Profesional',
         description:
-          'Have a contemporary design that reflects current design trends and gives a professional impression.',
+          'Tener un diseño contemporáneo que refleje las tendencias de diseño actuales y dé una impresión profesional.',
         icon: 'tabler:artboard',
       },
       {
-        title: 'Responsive and Mobile-Friendly',
-        description: 'Adapt seamlessly to different screen sizes and devices to ensure a consistent experience.',
+        title: 'Adaptable y Amigable con Móviles',
+        description: 'Adaptarse sin problemas a diferentes tamaños de pantalla y dispositivos para garantizar una experiencia consistente.',
         icon: 'tabler:picture-in-picture',
       },
       {
-        title: 'Customizability',
+        title: 'Personalización',
         description:
-          'Easily customizable, allowing users to adapt the design, colors, typography, and content to match their brand identity.',
+          'Fácilmente personalizable, permitiendo a los usuarios adaptar el diseño, colores, tipografía y contenido para que coincidan con su identidad de marca.',
         icon: 'tabler:adjustments-horizontal',
       },
       {
-        title: 'Fast Loading Times',
-        description: 'Optimized for speed to ensure a smooth user experience and favorable search engine rankings.',
+        title: 'Tiempos de Carga Rápidos',
+        description: 'Optimizado para la velocidad para garantizar una experiencia de usuario fluida y clasificaciones favorables en los motores de búsqueda.',
         icon: 'tabler:rocket',
       },
       {
-        title: 'Search Engine Optimization (SEO)',
+        title: 'Optimización para Motores de Búsqueda (SEO)',
         description:
-          'Incorporate SEO best practices in template structure and code to improve visibility in search engine results.',
+          'Incorporar las mejores prácticas de SEO en la estructura y el código de la plantilla para mejorar la visibilidad en los resultados de los motores de búsqueda.',
         icon: 'tabler:arrows-right-left',
       },
       {
-        title: 'Compatibility',
-        description: 'The templates work seamlessly across various content management systems and website builders.',
+        title: 'Compatibilidad',
+        description: 'Las plantillas funcionan sin problemas en diversos sistemas de gestión de contenido y constructores de sitios web.',
         icon: 'tabler:plug-connected',
       },
     ]}
   />
 
-  <!-- FAQs Widget ******************* -->
+  <!-- Componente FAQs ******************* -->
 
   <FAQs
-    title="Frequently Asked Questions"
+    title="Preguntas Frecuentes"
     items={[
       {
-        title: 'What are landing page templates?',
+        title: '¿Qué son las plantillas de páginas de aterrizaje?',
         description:
-          'Landing page templates are pre-designed web page layouts that are specifically created to serve as a foundation for building effective landing pages. These templates are designed to capture the attention of visitors and guide them towards a specific action or goal, such as signing up for a newsletter, making a purchase, or downloading a resource.',
+          'Las plantillas de páginas de aterrizaje son diseños de páginas web prediseñados que se crean específicamente para servir como base para construir páginas de aterrizaje efectivas. Estas plantillas están diseñadas para captar la atención de los visitantes y guiarlos hacia una acción u objetivo específico, como suscribirse a un boletín informativo, realizar una compra o descargar un recurso.',
       },
       {
-        title: 'Why should I use a template?',
+        title: '¿Por qué debería usar una plantilla?',
         description:
-          'Some of the advantages are that they provide a ready-to-use structure,  saving you significant time. Are designed with user-friendliness in mind and provide a cost-effective alternative, saving you money while still delivering a quality result.',
+          'Algunas de las ventajas son que proporcionan una estructura lista para usar, ahorrándote un tiempo significativo. Están diseñadas pensando en la facilidad de uso y proporcionan una alternativa rentable, ahorrándote dinero sin dejar de ofrecer un resultado de calidad.',
       },
       {
-        title: 'Can I preview templates before buying?',
+        title: '¿Puedo previsualizar las plantillas antes de comprar?',
         description:
-          'Yes, the templates allow you to preview them before making a purchase. There is a "Demo" button associated with each template.',
+          'Sí, las plantillas te permiten previsualizarlas antes de realizar una compra. Hay un botón de "Demostración" asociado con cada plantilla.',
       },
       {
-        title: 'Do I need technical skills to use a template?',
+        title: '¿Necesito habilidades técnicas para usar una plantilla?',
         description:
-          'Advanced technical skills are not required to use a template, but having a basic understanding of web navigation and familiarity with using online tools can still be beneficial. If you have more specific customization needs, you might need to consult guides or reach out to customer support for assistance.',
+          'No se requieren habilidades técnicas avanzadas para usar una plantilla, pero tener una comprensión básica de la navegación web y familiaridad con el uso de herramientas en línea aún puede ser beneficioso. Si tienes necesidades de personalización más específicas, es posible que necesites consultar guías o contactar al soporte al cliente para obtener ayuda.',
       },
       {
-        title: 'Can I use the template on multiple websites?',
+        title: '¿Puedo usar la plantilla en múltiples sitios web?',
         description:
-          'No, the template comes with a single-use license, meaning you can use the template on one website or project only. Using the template on additional websites would require purchasing additional licenses.',
+          'No, la plantilla viene con una licencia de un solo uso, lo que significa que puedes usar la plantilla en un solo sitio web o proyecto. Usar la plantilla en sitios web adicionales requeriría comprar licencias adicionales.',
       },
       {
-        title: 'What if I need help with customization?',
+        title: '¿Qué pasa si necesito ayuda con la personalización?',
         description:
-          "The templates provides a comprehensive step-by-step guide that walk you through the customization process. If you still have doubts, you can reach out to our customer support team. They can answer your questions, provide guidance on customization, and address any issues you're facing.",
+          "Las plantillas proporcionan una guía completa paso a paso que te guía a través del proceso de personalización. Si aún tienes dudas, puedes contactar a nuestro equipo de soporte al cliente. Pueden responder tus preguntas, proporcionar orientación sobre la personalización y abordar cualquier problema que enfrentes.",
       },
     ]}
   >
@@ -244,49 +244,49 @@ const metadata = {
     </Fragment>
   </FAQs>
 
-  <!-- Features3 Widget ************** -->
+  <!-- Componente Features3 ************** -->
 
   <Features3
-    title="Let us know how we can help"
-    subtitle="We’re here to help and answer any question you might have."
+    title="Dinos cómo podemos ayudar"
+    subtitle="Estamos aquí para ayudar y responder cualquier pregunta que puedas tener."
     columns={4}
     items={[
       {
-        title: 'Phone',
+        title: 'Teléfono',
         icon: 'tabler:phone',
         callToAction: {
           target: '_blank',
-          text: 'Call us',
+          text: 'Llámanos',
           href: '/',
           variant: 'link',
         },
       },
       {
-        title: 'Email',
+        title: 'Correo Electrónico',
         icon: 'tabler:mail',
         callToAction: {
           target: '_blank',
-          text: 'Write to us',
+          text: 'Escríbenos',
           href: '/',
           variant: 'link',
         },
       },
       {
-        title: 'Chat with sales',
+        title: 'Chatear con ventas',
         icon: 'tabler:message-circle',
         callToAction: {
           target: '_blank',
-          text: 'Start chatting',
+          text: 'Comenzar a chatear',
           href: '/',
           variant: 'link',
         },
       },
       {
-        title: 'Chat with support',
+        title: 'Chatear con soporte',
         icon: 'tabler:message-circle',
         callToAction: {
           target: '_blank',
-          text: 'Start chatting',
+          text: 'Comenzar a chatear',
           href: '/',
           variant: 'link',
         },
@@ -294,24 +294,23 @@ const metadata = {
     ]}
   />
 
-  <!-- CallToAction Widget *********** -->
+  <!-- Componente CallToAction *********** -->
 
   <CallToAction
     actions={[
       {
         variant: 'primary',
         target: '_blank',
-        text: 'Get templates',
+        text: 'Obtener plantillas',
         href: 'https://github.com/onwidget/astrowind',
         icon: 'tabler:download',
       },
     ]}
   >
-    <Fragment slot="title">Be a part of our vision</Fragment>
+    <Fragment slot="title">Sé parte de nuestra visión</Fragment>
 
     <Fragment slot="subtitle">
-      Discover a dynamic work environment, unparalleled growth opportunities, and the chance to make a meaningful
-      impact.
+      Descubre un entorno de trabajo dinámico, oportunidades de crecimiento incomparables y la oportunidad de tener un impacto significativo.
     </Fragment>
   </CallToAction>
 </Layout>

@@ -36,17 +36,17 @@ export type ImagesOptimizer = (
 
 /* ******* */
 const config = {
-  // FIXME: Use this when image.width is minor than deviceSizes
+  // FIXME: Usar esto cuando image.width sea menor que deviceSizes
   imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
 
   deviceSizes: [
-    640, // older and lower-end phones
+    640, // teléfonos más antiguos y de gama baja
     750, // iPhone 6-8
     828, // iPhone XR/11
-    960, // older horizontal phones
+    960, // teléfonos horizontales más antiguos
     1080, // iPhone 6-8 Plus
     1280, // 720p
-    1668, // Various iPads
+    1668, // Varios iPads
     1920, // 1080p
     2048, // QXGA
     2560, // WQXGA
@@ -83,23 +83,23 @@ const parseAspectRatio = (aspectRatio: number | string | null | undefined): numb
 };
 
 /**
- * Gets the `sizes` attribute for an image, based on the layout and width
+ * Obtiene el atributo `sizes` para una imagen, basado en el diseño y el ancho
  */
 export const getSizes = (width?: number, layout?: Layout): string | undefined => {
   if (!width || !layout) {
     return undefined;
   }
   switch (layout) {
-    // If screen is wider than the max size, image width is the max size,
-    // otherwise it's the width of the screen
+    // Si la pantalla es más ancha que el tamaño máximo, el ancho de la imagen es el tamaño máximo,
+    // de lo contrario, es el ancho de la pantalla
     case `constrained`:
       return `(min-width: ${width}px) ${width}px, 100vw`;
 
-    // Image is always the same width, whatever the size of the screen
+    // La imagen siempre tiene el mismo ancho, sea cual sea el tamaño de la pantalla
     case `fixed`:
       return `${width}px`;
 
-    // Image is always the width of the screen
+    // La imagen siempre tiene el ancho de la pantalla
     case `fullWidth`:
       return `100vw`;
 
@@ -132,7 +132,7 @@ const getStyle = ({
     ['object-position', objectPosition],
   ];
 
-  // If background is a URL, set it to cover the image and not repeat
+  // Si el fondo es una URL, configurarlo para que cubra la imagen y no se repita
   if (background?.startsWith('https:') || background?.startsWith('http:') || background?.startsWith('data:')) {
     styleEntries.push(['background-image', `url(${background})`]);
     styleEntries.push(['background-size', 'cover']);
@@ -200,10 +200,10 @@ const getBreakpoints = ({
   }
   if (layout === 'constrained') {
     return [
-      // Always include the image at 1x and 2x the specified width
+      // Incluir siempre la imagen a 1x y 2x el ancho especificado
       width,
       doubleWidth,
-      // Filter out any resolutions that are larger than the double-res image
+      // Filtrar cualquier resolución que sea mayor que la imagen de doble resolución
       ...(breakpoints || config.deviceSizes).filter((w) => w < doubleWidth),
     ];
   }
@@ -301,27 +301,27 @@ export async function getImagesOptimized(
   sizes ||= getSizes(Number(width) || undefined, layout);
   aspectRatio = parseAspectRatio(aspectRatio);
 
-  // Calculate dimensions from aspect ratio
+  // Calcular dimensiones a partir de la relación de aspecto
   if (aspectRatio) {
     if (width) {
       if (height) {
-        /* empty */
+        /* vacío */
       } else {
         height = width / aspectRatio;
       }
     } else if (height) {
       width = Number(height * aspectRatio);
     } else if (layout !== 'fullWidth') {
-      // Fullwidth images have 100% width, so aspectRatio is applicable
-      console.error('When aspectRatio is set, either width or height must also be set');
-      console.error('Image', image);
+      // Las imágenes de ancho completo tienen un ancho del 100%, por lo que la relación de aspecto es aplicable
+      console.error('Cuando se establece aspectRatio, también se debe establecer width o height');
+      console.error('Imagen', image);
     }
   } else if (width && height) {
     aspectRatio = width / height;
   } else if (layout !== 'fullWidth') {
-    // Fullwidth images don't need dimensions
-    console.error('Either aspectRatio or both width and height must be set');
-    console.error('Image', image);
+    // Las imágenes de ancho completo no necesitan dimensiones
+    console.error('Se debe establecer aspectRatio o tanto width como height');
+    console.error('Imagen', image);
   }
 
   let breakpoints = getBreakpoints({ width: width, breakpoints: widths, layout: layout });
